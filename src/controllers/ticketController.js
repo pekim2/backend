@@ -4,6 +4,16 @@ const knex = require('../database/index')
    
       
 //GET Produtos
+async getById(req, res){
+
+    const { id } = req.params;
+
+   const result = await knex('ingresso').where({ id });
+
+    return res.json(result)
+   },
+
+
 async getAll(req, res){
 
    const result = await knex('ingresso');

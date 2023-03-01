@@ -17,6 +17,7 @@ routes.delete('/produtos/:id', produtoController.delete);//DELETE PRODUTOS
 
 
 //ROTAS E REQUISIÇÕES DA TABELA INGRESSO
+routes.get('/ingresso/:id', ticketController.getById); // GET INGRESSO
 routes.get('/ingresso', ticketController.getAll); // GET INGRESSO
 routes.post('/ingresso', ticketController.create); // POST INGRESSO
 routes.put('/ingresso/:id', ticketController.update); //PUT INGRESSO
@@ -24,7 +25,7 @@ routes.delete('/ingresso/:id', ticketController.delete);//DELETE INGRESSO
 
 
 
-//ROTAS E REQUISIÇÕES DA TABELA INGRESSO
+//ROTAS E REQUISIÇÕES DA TABELA PEDIDOS
 routes.get('/pedido_ingresso', pedidoController.getAll); // GET INGRESSO
 routes.post('/pedido_ingresso', pedidoController.create); // POST INGRESSO
 routes.put('/pedido_ingresso/:id', pedidoController.update); //PUT INGRESSO
